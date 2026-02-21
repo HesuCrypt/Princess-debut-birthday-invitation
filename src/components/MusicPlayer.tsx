@@ -10,7 +10,7 @@ const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    audioRef.current = new Audio('https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=classical-piano-waltz-11394.mp3'); // Royalty free waltz
+    audioRef.current = new Audio('/assets/music/background_music.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0.3;
   }, []);
@@ -36,7 +36,7 @@ const MusicPlayer = forwardRef<MusicPlayerHandle>((_, ref) => {
   };
 
   return (
-    <button 
+    <button
       onClick={togglePlay}
       className="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full glass-panel flex items-center justify-center text-gold hover:scale-110 transition-transform"
     >
