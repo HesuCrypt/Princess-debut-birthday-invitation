@@ -11,6 +11,7 @@ import DecorativeBackground from './components/DecorativeBackground';
 import GoldDivider from './components/GoldDivider';
 import ThemePalette from './components/ThemePalette';
 import EventItinerary from './components/EventItinerary';
+import VenueGallery from './components/VenueGallery';
 import { ChevronDown } from 'lucide-react';
 
 function LoadingScreen() {
@@ -47,7 +48,7 @@ function App() {
       </AnimatePresence>
 
       <main className={`transition-opacity duration-1000 ${showIntro ? 'opacity-0' : 'opacity-100'} relative z-10`}>
-        
+
         {/* HERO SECTION */}
         <section className="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center">
           {/* 3D Background */}
@@ -77,8 +78,8 @@ function App() {
               </p>
               <div className="h-px w-12 bg-gold/50" />
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 2.8, duration: 1 }}
@@ -86,8 +87,8 @@ function App() {
             >
               Princess Sophia
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 3.2, duration: 1 }}
@@ -108,7 +109,7 @@ function App() {
             </motion.button>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 4, duration: 1 }}
@@ -130,14 +131,14 @@ function App() {
               className="mb-20"
             >
               <span className="font-script text-4xl text-gold/60 mb-2 block">The Celebration</span>
-              <h2 className="font-display text-4xl md:text-5xl text-gold-gradient mb-8 tracking-wide">A Night of Elegance</h2>
+              <h2 className="font-display text-4xl md:text-5xl text-gold-gradient mb-8 tracking-wide">A Night Of Midnight Petals</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-crimson to-transparent mx-auto mb-8" />
               <p className="font-serif text-xl md:text-2xl text-ivory/90 leading-relaxed max-w-3xl mx-auto italic">
-                "Join us for an enchanting evening of music, dining, and celebration as Princess Sophia steps into a new chapter of life. 
-                Surrounded by the timeless beauty of red roses and the warmth of loved ones."
+                Please join us for an evening of dinner and celebration as Princess Sophia steps into a new chapter of life.
+                We honor this milestone with 18 Roses, 18 Candles, and 18 Blue Bills, surrounded by the beauty of her favorite roses and the warmth of her loved ones.
               </p>
             </motion.div>
-            
+
             <Countdown />
           </div>
         </section>
@@ -156,14 +157,16 @@ function App() {
         </section>
 
         <GoldDivider />
+        <VenueGallery />
+        <GoldDivider />
 
         {/* THEME & ITINERARY SECTION */}
         <section className="py-24 px-4 relative">
-           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none" />
-           <div className="max-w-7xl mx-auto space-y-24 relative z-10">
-              <ThemePalette />
-              <EventItinerary />
-           </div>
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none" />
+          <div className="max-w-7xl mx-auto space-y-24 relative z-10">
+            <ThemePalette />
+            <EventItinerary />
+          </div>
         </section>
 
         <GoldDivider />

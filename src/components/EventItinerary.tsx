@@ -5,27 +5,33 @@ export default function EventItinerary() {
   const events = [
     {
       icon: Waves,
-      time: "3:00 PM",
-      title: "Poolside Soirée",
-      description: "Begin the celebration with refreshing cocktails and leisure by the azure waters."
+      time: "05:00 PM",
+      title: "Photos & Welcome",
+      description: "Welcome gathering with family and friends for photos."
     },
     {
       icon: Utensils,
-      time: "6:00 PM",
-      title: "The Grand Feast",
-      description: "A culinary journey featuring exquisite dishes prepared for royalty."
+      time: "06:15 PM",
+      title: "Opening Prayer & Dinner",
+      description: "Opening prayer led by the Debutante, followed by dinner."
     },
     {
       icon: GlassWater,
-      time: "7:30 PM",
-      title: "Toast & Tributes",
-      description: "Heartfelt speeches and a champagne toast to honor Princess Sophia."
+      time: "07:30 PM",
+      title: "The 18 Traditions",
+      description: "18 Roses, 18 Candles, and 18 Blue Bills."
     },
     {
       icon: Music,
-      time: "8:30 PM",
-      title: "Midnight Ball",
-      description: "Dance the night away under the stars with enchanting melodies."
+      time: "08:30 PM",
+      title: "Blowing of the Candles",
+      description: "Blowing of the cake candles."
+    },
+    {
+      icon: Waves,
+      time: "09:00 PM",
+      title: "Free Time & Celebration",
+      description: "Free time for swimming and celebration."
     }
   ];
 
@@ -48,25 +54,22 @@ export default function EventItinerary() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`flex flex-col md:flex-row items-center gap-8 md:gap-0 ${
-                index % 2 === 0 ? 'md:flex-row-reverse' : ''
-              }`}
+              className={`flex flex-col md:flex-row items-center gap-8 md:gap-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                }`}
             >
               {/* Content Side */}
               <div className="flex-1 w-full pl-12 md:pl-0 md:text-center md:w-auto">
-                 <div className={`glass-panel p-8 rounded-xl border border-gold/10 hover:border-gold/30 transition-all duration-500 relative group ${
-                   index % 2 === 0 ? 'md:mr-12 md:text-right' : 'md:ml-12 md:text-left'
-                 }`}>
-                    <div className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-gold rounded-full border-4 border-black z-10 hidden md:block ${
-                      index % 2 === 0 ? '-right-[58px]' : '-left-[58px]'
+                <div className={`glass-panel p-8 rounded-xl border border-gold/10 hover:border-gold/30 transition-all duration-500 relative group ${index % 2 === 0 ? 'md:mr-12 md:text-right' : 'md:ml-12 md:text-left'
+                  }`}>
+                  <div className={`absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-gold rounded-full border-4 border-black z-10 hidden md:block ${index % 2 === 0 ? '-right-[58px]' : '-left-[58px]'
                     }`} />
-                    
-                    <h4 className="font-display text-2xl text-gold mb-2">{event.title}</h4>
-                    <p className="font-serif text-ivory/80 mb-4">{event.description}</p>
-                    <span className="inline-block px-4 py-1 border border-gold/30 rounded-full text-xs font-sans uppercase tracking-widest text-gold/80">
-                      {event.time}
-                    </span>
-                 </div>
+
+                  <h4 className="font-display text-2xl text-gold mb-2">{event.title}</h4>
+                  <p className="font-serif text-ivory/80 mb-4">{event.description}</p>
+                  <span className="inline-block px-4 py-1 border border-gold/30 rounded-full text-xs font-sans uppercase tracking-widest text-gold/80">
+                    {event.time}
+                  </span>
+                </div>
               </div>
 
               {/* Icon Center */}
